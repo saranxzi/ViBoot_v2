@@ -1,0 +1,26 @@
+{
+   "action": {
+      "default_popup": "html/popup.html"
+   },
+   "author": "Saran",
+   "background": {
+      "service_worker": "service_worker/background.js"
+   },
+   "content_scripts": [ {
+      "js": [ "js/attendance.js", "js/marks_page.js", "js/course_page.js", "js/navbar.js", "js/da_upload.js", "js/da_upload_sub.js", "js/captcha/bitmaps.js", "js/captcha/captchaparser.js", "js/exam_schedule.js", "js/navbarcc.js", "js/time_table.js", "js/facility_registration.js" ],
+      "matches": [ "*://vtop.vit.ac.in/*", "*://vtopcc.vit.ac.in/vtop/*" ]
+   } ],
+   "description": "Enhance your VTOP in one click",
+   "host_permissions": [ "*://vtop.vit.ac.in/*", "*://vtopcc.vit.ac.in/vtop/*", "https://ntfy.sh/*", "http://localhost/*", "http://127.0.0.1/*" ],
+   "icons": {
+      "128": "assets/icons/img_128.png",
+      "16": "assets/icons/img_16.png",
+      "48": "assets/icons/img_48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAiuIR0SpG9/l9O9t5qrNIolmOarsWHgj/+g26yA7oxAUBjvJQg73MK1TNmo1ntIFoaLpIuws8bBT8BLgf9OC5hxYiME6ivrfQ81PPdh39OiB/u391p5uVfoSig+vBF9ky+F2aRwfjbnF8bJUnr3dmfTlMjWmK3h3WSj2e/oCYqRlYqqyLYSVmbw2gEzYWa2KE5E32eK3OTLyPjJgeUvC111sT8dEBtp+lCub9i3AXiaOGVSZM+AJXuw8toGMhfWLqusCwEWxrmPZFnMb8OKxbl3YWeMOdOnL168VZoRIMr/OJUbhcK6kuEGzoZ9sxUdP6eQXfFG1AbbytgjGJZs4a7QIDAQAB",
+   "manifest_version": 3,
+   "name": "ViBoot",
+   "permissions": [ "webRequest", "downloads", "storage", "tabs", "alarms", "notifications" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "2.1.15"
+}
