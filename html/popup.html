@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+    <title>ViBoot Settings</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="navbar">
+        <img src="../assets/img/logo.svg" alt="logo" width="auto" height="35px" />
+        <span style="font-weight: bold; font-size: 16px; margin-left: 10px; color: #2c3e50;">ViBoot Utilities</span>
+      </div>
+
+      <div class="body">
+        <form id="settings-form">
+          <div class="form-group checkbox-group" style="margin-bottom: 12px; border-bottom: 1px solid #eee; padding-bottom: 8px;">
+            <label>
+              <input type="checkbox" id="email-enable" /> <strong>Enable Email Alerts</strong>
+            </label>
+            <div style="font-size: 10px; color: #666; margin-left: 20px;">Requires local notify_server.py to be running</div>
+          </div>
+
+          <div style="display: flex; gap: 10px;">
+            <div class="form-group" style="flex: 2;">
+              <label for="smtp-server">SMTP Server:</label>
+              <input type="text" id="smtp-server" placeholder="smtp.example.com" />
+            </div>
+            <div class="form-group" style="flex: 1;">
+              <label for="smtp-port">Port:</label>
+              <input type="number" id="smtp-port" placeholder="587" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="sender-email">Sender Email:</label>
+            <input type="email" id="sender-email" placeholder="sender@example.com" />
+          </div>
+
+          <div class="form-group">
+            <label for="smtp-password">SMTP Password / App Password:</label>
+            <input type="password" id="smtp-password" placeholder="Your password" />
+          </div>
+
+          <div class="form-group">
+            <label for="receiver-email">Receiver Email:</label>
+            <input type="email" id="receiver-email" placeholder="receiver@example.com" />
+          </div>
+
+          <div class="form-group" style="margin-top: 12px; border-top: 1px solid #eee; padding-top: 10px;">
+            <label for="ntfy-topic">ntfy Push Topic (optional):</label>
+            <input type="text" id="ntfy-topic" placeholder="e.g. my-gym-alert" />
+            <div style="font-size: 10px; color: #666; margin-top: 4px;">For free instant mobile push notifications. Get the app at ntfy.sh</div>
+          </div>
+
+          <button type="submit" id="save-btn">Save Configurations</button>
+        </form>
+        <div id="save-status" style="display: none; text-align: center; color: #198754; font-weight: bold; font-size: 12px; margin-top: 8px;">Settings saved successfully!</div>
+      </div>
+    </div>
+    <script src="../js/popup.js"></script>
+  </body>
+</html>
