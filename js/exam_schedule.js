@@ -1,0 +1,1 @@
+// ViBoot Exam Schedule Script (Google Calendar sync removed)
